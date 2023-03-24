@@ -1,0 +1,27 @@
+body {
+    margin:0;
+    display: flex;
+    justify-content: center;
+  }
+  .main-wrapper {
+    width: 70%;
+  }
+  header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  .headerNav {
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #666666;
+  }
+
+  .logo {
+    height: 80px;
+  }
+

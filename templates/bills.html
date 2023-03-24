@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    {%if exact_bill %}
+        {% for bill in exact_bill %}
+        <hr>
+        <p> Bill ID: {{bill.id}}</p>
+        <p> Name: {{bill.description}}</p>
+        <p> Total Eur: {{bill.amount}}</p>
+        <p> Group ID: {{bill.group_id}}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+<hr>
+<div>
+    <form method="post" action="#">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.description.label}}
+            {{ form.description }}
+        </div>
+        <div >
+            {{ form.amount.label }}
+            {{ form.amount }}
+        </div>
+        <div>
+            {{ form.group.label }}
+            {{ form.group }}
+        </div>
+        {{ form.submit }}
+    </form>
+</div>
+{% endblock  %}

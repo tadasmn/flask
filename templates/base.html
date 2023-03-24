@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" 
+          href="{{ url_for('static', filename='/styles.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Split Bill</title>
+  </head>
+  <body>
+    <section class="main-wrapper">
+      <header>
+        <div class="headerLeftSideWrapper">
+        <a href="/" class="logoarea">
+        <img href="/"; class="logo" src="{{ url_for('static', filename='/google.jpg') }}">
+        </a>
+        <p class="headerText">Best in market</p>
+      </div>
+      </header>
+     
+      <main class="items" id="items">
+        {% block content %}
+            {% endblock %}
+      </main>
+      <footer>
+        <div class="footerText">
+        <p >Copyright</p>
+        </div>
+      </footer>
+
+    </section>
+    
+  </body>
+</html>
