@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    {% if all_groups%}
+        {% for group in all_groups%}
+        <hr>
+        <a href="{{ url_for('bills', number=group['number']) }}">Group number:{{group.number}}</a>
+        <p>Group Name:{{group.name}}</p>
+        <p>Group ID: {{group.id}}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+<hr>
+<div>
+    <form method="post" action="#">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.number.label }}
+        {{ form.number }}
+    </div>
+    <div>
+        {{ form.name.label }}
+        {{ form.name }}
+    </div>
+    {{ form.submit }}
+</form>
+</div>
+
+{% endblock  %}
